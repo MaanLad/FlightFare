@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        function updateRangeInput(val) {
+            document.getElementById('rangeInput').value = val;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>FlightFare</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            flight fare
+        </div>
+        <div class="right">
+            <form action="">
+                <div class="first">
+                    <div class="formgroup">
+                        <label for="fromFeild">From</label>
+                        <input type="text" name="from" id="fromFeild">
+                    </div>
+                    <div class="formgroup">
+                        <label for="toFeild">To</label>
+                        <input type="text" name="from" id="toFeild">
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="formgroup">
+                        <label for="date">Date</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="formgroup">
+                        <input type="button" id="oneway" value="^">
+                    </div>
+                    <div class="formgroup">
+                        <input type="button" id="twoway" value="<>">
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="formgroup" id="priceRange">
+                        <label for="rangeInput">PriceRange</label>
+                        <input type="range" name="priceRange" min="5000" max="150000"
+                            onchange="updateRangeInput(this.value);">
+                        <input type="text" id="rangeInput" value="5000">
+                    </div>
+                </div>
+                <div class="fourth">
+                    <div class="formgroup" id="submit">
+                        <label for="predict">Predict</label>
+                        <input type="submit" id="predict" name="predict" value="PREDICT">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
